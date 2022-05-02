@@ -19,7 +19,7 @@ public class TestMaximum <T extends Comparable<T>>{
     }
 
     /*
-     * testMaximum method extends comparable T to Extend the max method to take more than three parameters
+     * testMaximum method extends comparable T to extend the max method to take more than three parameters
      */
     public static<T extends Comparable<T>> T testMaximum(T...values){
         T max = values[0];
@@ -33,18 +33,12 @@ public class TestMaximum <T extends Comparable<T>>{
     }
 
     /*
-     *  printMax method created for displaying maximum values for given variables.
+     *  printMax method created for displaying maximum values from more than three parameters
      */
-    public static <T> void printMax(T max) {
-        System.out.println("The maximum values is:\t" +max);
-    }
-
-
-    /*
-     *  printMax method created for displaying maximum values from the given 3 variables.
-     */
-    public static void printMax(String x, String y, String z, String max) {
-        System.out.printf("The max of %s, %s and %s is %s\n", x, y, z, max);
-
+    public static <T> void printMax(T max, T... values) {
+        for (T element : values) {
+            System.out.print(element+ "\t");
+        }
+        System.out.print("\n The maximum value is: " + max + "\n");
     }
 }
